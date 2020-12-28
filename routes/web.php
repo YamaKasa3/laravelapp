@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -69,5 +71,6 @@ EOF;
 });
 */
 
-Route::get('hello', 'HelloController@index');
+//Route::get('hello', 'HelloController@index');
 
+Route::get('hello/{id?}/{pass?}', 'HelloController@index');
