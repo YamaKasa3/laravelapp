@@ -73,4 +73,9 @@ EOF;
 
 //Route::get('hello', 'HelloController@index');
 
-Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+//コントローラとパラメータ
+//Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+
+// 複数アクションの利用
+Route::get('hello', 'HelloController@index');
+Route::get('hello/other', 'HelloController@other');
