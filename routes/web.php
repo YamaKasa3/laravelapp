@@ -22,7 +22,7 @@ Route::get('hello', function() {
 });
 */
 
-
+/*
 // ヒアドキュメント
 $html = <<<EOF
 <html>
@@ -43,10 +43,11 @@ EOF;
 Route::get('hello', function () use ($html) {
     return $html;
 });
+*/
 
-
+/*
 // パラメータの利用
-Route::get('hello/{msg}', function ($msg) {
+Route::get('hello/{msg?}', function ($msg = 'no message.') {
     $html = <<< EOF
     <html>
     <head>
@@ -66,3 +67,7 @@ EOF;
     return $html;
 
 });
+*/
+
+Route::get('hello', 'HelloController@index');
+
