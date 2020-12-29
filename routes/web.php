@@ -98,3 +98,6 @@ Route::get('hello', function () {
 
 // コントローラ文字列
 Route::get('hello', 'HelloController@index');
+
+// POSTルート設定
+Route::post('hello', 'HelloController@post');

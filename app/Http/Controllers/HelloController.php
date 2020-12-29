@@ -183,6 +183,7 @@ class HelloController extends Controller
 }
 */
 
+/*
 // Bladeテンプレート
 class HelloController extends Controller
 {
@@ -192,6 +193,27 @@ class HelloController extends Controller
             'msg' => 'これはBladeを利用したサンプルです。',
         ];
 
+        return view('hello.index', $data);
+    }
+}
+*/
+
+//フォームの利用
+
+class HelloController extends Controller
+{
+    public function index()
+    {
+        //$data = ['msg' => 'お名前を入力してください'];
+
+        return view('hello.index');
+    }
+
+    public function post(Request $request)
+    {
+        $msg = $request->msg;
+        //$data = ['msg' => 'こんにちは、' . $msg . 'さん!'];
+        $data = ['msg' => $msg];
         return view('hello.index', $data);
     }
 }
