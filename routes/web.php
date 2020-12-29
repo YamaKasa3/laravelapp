@@ -81,4 +81,7 @@ EOF;
 // Route::get('hello/other', 'HelloController@other');
 
 // HelloControllerをシングルアクション化
-Route::get('hello', 'HelloController');
+//Route::get('hello', 'HelloController');
+
+//Request Response
+Route::get('hello', 'HelloController@index');
