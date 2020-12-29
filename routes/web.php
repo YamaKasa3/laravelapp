@@ -77,5 +77,8 @@ EOF;
 //Route::get('hello/{id?}/{pass?}', 'HelloController@index');
 
 // 複数アクションの利用
-Route::get('hello', 'HelloController@index');
-Route::get('hello/other', 'HelloController@other');
+// Route::get('hello', 'HelloController@index');
+// Route::get('hello/other', 'HelloController@other');
+
+// HelloControllerをシングルアクション化
+Route::get('hello', 'HelloController');
