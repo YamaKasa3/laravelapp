@@ -167,6 +167,7 @@ class HelloController extends Controller
 }
 */
 
+/*
 // クエリ文字列
 class HelloController extends Controller
 {
@@ -175,6 +176,20 @@ class HelloController extends Controller
         $data = [
             'msg' => 'これはコントローラから渡されたメッセージです。',
             'id' => $request->id
+        ];
+
+        return view('hello.index', $data);
+    }
+}
+*/
+
+// Bladeテンプレート
+class HelloController extends Controller
+{
+    public function index()
+    {
+        $data = [
+            'msg' => 'これはBladeを利用したサンプルです。',
         ];
 
         return view('hello.index', $data);
