@@ -100,4 +100,4 @@ Route::get('hello', function () {
 Route::get('hello', 'HelloController@index');
 
 // POSTルート設定
-Route::post('hello', 'HelloController@post');
+//Route::post('hello', 'HelloController@post');

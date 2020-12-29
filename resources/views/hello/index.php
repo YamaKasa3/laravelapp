@@ -13,7 +13,7 @@
 </body>
 </html> -->
 
-<html>
+<!-- <html>
 <head>
     <title>Hello/Index</title>
     <style>
@@ -27,4 +27,4 @@
     <p><?php echo date("Y年n月j日"); ?></p>
     <p>ID=<?php echo $id; ?></p>
 </body>
-</html> 
+</html>  -->

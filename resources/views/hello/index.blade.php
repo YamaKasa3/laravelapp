@@ -1,4 +1,5 @@
-<html>
+{{--
+<!-- <html>
 <head>
     <title>Hello/Index</title>
     <style>
@@ -24,4 +25,23 @@
         <input type="submit">
     </form>
 </body>
-</html>
+</html> -->
+--}}
+
+@extends('layouts.helloapp')
+
+@section('title', 'Index')
+
+@section('menubar')
+    @paraent
+    インデックスページ
+@endsection
+
+@section('content')
+    <p>ここが本文のコンテンツです。</p>
+    <p>必要なだけ記述できます。</p>
+@endsection
+
+@section('footer')
+copyright 2020
+@endsection
