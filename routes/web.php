@@ -84,4 +84,17 @@ EOF;
 //Route::get('hello', 'HelloController');
 
 //Request Response
+//Route::get('hello', 'HelloController@index');
+
+//テンプレート
+/*
+Route::get('hello', function () {
+    return view('hello.index');
+});
+*/
+
+// テンプレートに値を渡す
+//Route::get('hello/{id?}', 'HelloController@index');
+
+// コントローラ文字列
 Route::get('hello', 'HelloController@index');

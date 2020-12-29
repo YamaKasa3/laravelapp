@@ -121,6 +121,7 @@ EOF;
 }
 */
 
+/*
 // Request, Response
 class HelloController extends Controller
 {
@@ -149,4 +150,33 @@ EOF;
         return $response;
     }
 }
+*/
 
+/*
+// パラメータ
+class HelloController extends Controller
+{
+    public function index($id = 'zero')
+    {
+        $data = [
+            'msg' => 'これはコントローラから渡されたメッセージです',
+            'id' => $id
+        ];
+        return view('hello.index', $data);
+    }
+}
+*/
+
+// クエリ文字列
+class HelloController extends Controller
+{
+    public function index(Request $request)
+    {
+        $data = [
+            'msg' => 'これはコントローラから渡されたメッセージです。',
+            'id' => $request->id
+        ];
+
+        return view('hello.index', $data);
+    }
+}
