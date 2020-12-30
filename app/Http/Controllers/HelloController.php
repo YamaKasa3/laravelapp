@@ -210,7 +210,7 @@ class HelloController extends Controller
             ['name' => '山田はなこ', 'mail' => 'hanako@flower'],
             ['name' => '鈴木さちこ', 'mail' => 'sachico@happy']
         ];
-        return view('hello.index', ['data' => $data]);
+        return view('hello.index',['message' => 'Hello']);
     }
 
     public function post(Request $request)
@@ -218,6 +218,6 @@ class HelloController extends Controller
         $msg = $request->msg;
         //$data = ['msg' => 'こんにちは、' . $msg . 'さん!'];
         $data = ['msg' => $msg];
-        return view('hello.index', $data);
+        return view('hello.index',['message' => 'Hello']);
     }
 }
