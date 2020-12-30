@@ -205,8 +205,12 @@ class HelloController extends Controller
     public function index()
     {
         //$data = ['msg' => 'お名前を入力してください'];
-
-        return view('hello.index');
+        $data = [
+            ['name' => '山田たろう', 'mail' => 'taro@yamada'],
+            ['name' => '山田はなこ', 'mail' => 'hanako@flower'],
+            ['name' => '鈴木さちこ', 'mail' => 'sachico@happy']
+        ];
+        return view('hello.index', ['data' => $data]);
     }
 
     public function post(Request $request)
