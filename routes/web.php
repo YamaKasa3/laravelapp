@@ -3,6 +3,8 @@
 use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+
+use App\Http\Middleware\HelloMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -97,7 +99,10 @@ Route::get('hello', function () {
 //Route::get('hello/{id?}', 'HelloController@index');
 
 // コントローラ文字列
-Route::get('hello', 'HelloController@index');
+//Route::get('hello', 'HelloController@index');
 
 // POSTルート設定
 //Route::post('hello', 'HelloController@post');
+
+// MiddleWare
+Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);

@@ -198,6 +198,7 @@ class HelloController extends Controller
 }
 */
 
+/*
 //フォームの利用
 
 class HelloController extends Controller
@@ -221,3 +222,14 @@ class HelloController extends Controller
         return view('hello.index',['message' => 'Hello']);
     }
 }
+*/
+
+// ミドルウェアの利用
+class HelloController extends Controller
+{
+    public function index(Request $request)
+    {
+        return view('hello.index');
+    }
+}
+
