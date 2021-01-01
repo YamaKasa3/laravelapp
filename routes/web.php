@@ -105,4 +105,4 @@ Route::get('hello', function () {
 //Route::post('hello', 'HelloController@post');
 
 // MiddleWare
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')->middleware('hello');
